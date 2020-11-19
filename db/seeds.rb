@@ -9,6 +9,7 @@
 require 'faker'
 3.times do
   my_category = Category.create(title: Faker::Book.genre)
+  email = Email.create(object: Faker::Book.title, body: Faker::Book.genre)
   3.times do
     my_task = Task.new(title: Faker::Book.title,
                       deadline: Faker::Date.forward(23),

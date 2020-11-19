@@ -15,6 +15,10 @@ before_action :authenticate_user!
       redirect_to root_path
       flash[:notice] = "Please try again"
     end
+    respond_to do |format|
+      format.html { redirect_to tasks_path }
+      format.js { }
+    end
   end
 
   def edit
@@ -28,6 +32,10 @@ before_action :authenticate_user!
     @task.update(task_params)
     redirect_to tasks_path
     flash[:notice] = "Task edited"
+    respond_to do |format|
+      format.html { redirect_to tasks_path }
+      format.js { }
+    end
   end
 
   def index
@@ -38,6 +46,10 @@ before_action :authenticate_user!
     @task = Task.find(params[:id])
     @task.destroy
     redirect_to root_path
+    respond_to do |format|
+      format.html { redirect_to tasks_path }
+      format.js { }
+    end
   end
 
 

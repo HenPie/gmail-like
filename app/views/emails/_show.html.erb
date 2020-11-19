@@ -1,0 +1,10 @@
+<div>
+  <p class="h3"><b>Object : </b><%= email.object %></p>
+  <hr>
+  <p><%= email.body %></p>
+  <div>
+    <%= link_to "Delete this email", email_path(email.id), method: :delete, class: "btn btn-danger" %>
+    <%= link_to "Mark as not read", email_path(email.id), id:"btn-read", class:"btn btn-info", method: :put, remote: true %>
+    <button class="btn btn-info">Edit</button>
+  </div>
+</div>

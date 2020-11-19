@@ -21,4 +21,12 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* Pour ce projet, nous allons te demander de faire un Email Viewer qui n'est ni plus ni moins qu'une version ultra basique de Gmail. 
+
+* Création d'un email 
+
+* Affichage du contenu d'un email dans la partie droite
+
+* Suppression d'un email
+
+* Marquer comme non lu un email et inverse 
